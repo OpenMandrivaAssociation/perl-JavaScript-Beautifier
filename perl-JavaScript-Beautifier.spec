@@ -45,8 +45,6 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %doc Changes README
-%{_mandir}/man3/*
+%{_mandir}/man?/*
 %perl_vendorlib/*
-/usr/bin/js_beautify.pl
-/usr/share/man/man1/js_beautify.pl.1.lzma
-
+%{_bindir}/*
