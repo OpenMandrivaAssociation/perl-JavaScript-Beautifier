@@ -1,15 +1,15 @@
 %define upstream_name    JavaScript-Beautifier
-%define upstream_version 0.17
+%define upstream_version 0.25
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Beautify Javascript (beautifier for javascript)
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/JavaScript/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/fayland/perl-javascript-beautifier/tree/master
+Source0:	https://cpan.metacpan.org/authors/id/F/FA/FAYLAND/JavaScript-Beautifier-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
