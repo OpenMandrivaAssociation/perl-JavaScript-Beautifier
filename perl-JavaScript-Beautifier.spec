@@ -1,15 +1,13 @@
 %define upstream_name    JavaScript-Beautifier
-%define upstream_version 0.25
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.25
+Release:	2
 
 Summary:	Beautify Javascript (beautifier for javascript)
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/fayland/perl-javascript-beautifier/tree/master
-Source0:	https://cpan.metacpan.org/authors/id/F/FA/FAYLAND/JavaScript-Beautifier-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/F/FA/FAYLAND/JavaScript-Beautifier-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ http://github.com/einars/js-beautify/tree/master/beautify.js manpage
 You can check it through the http://jsbeautifier.org/ manpage
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
