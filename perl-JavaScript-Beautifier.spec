@@ -2,7 +2,7 @@
 %define upstream_version 0.25
 Name:		perl-%{upstream_name}
 Version:	0.25
-Release:	4
+Release:	5
 
 Summary:	Beautify Javascript (beautifier for javascript)
 License:	GPL+ or Artistic
@@ -28,16 +28,16 @@ You can check it through the http://jsbeautifier.org/ manpage
 %setup -q -n JavaScript-Beautifier-0.25
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Build.PL installdirs=vendor
+./Build
 
 %check
 # soft: do not fail package on test failures
 set +e
-%make test
+./Build test || :
 
 %install
-%makeinstall_std
+./Build install destdir=%{buildroot} create_packlist=0
 
 %files
 %doc Changes README
