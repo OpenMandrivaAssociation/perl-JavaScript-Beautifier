@@ -2,7 +2,7 @@
 %define upstream_version 0.25
 Name:		perl-%{upstream_name}
 Version:	0.25
-Release:	31
+Release:	32
 
 Summary:	Beautify Javascript (beautifier for javascript)
 License:	GPL+ or Artistic
