@@ -2,7 +2,7 @@
 %define upstream_version 0.25
 Name:		perl-%{upstream_name}
 Version:	0.25
-Release:	48
+Release:	49
 
 Summary:	Beautify Javascript (beautifier for javascript)
 License:	GPL+ or Artistic
@@ -39,6 +39,8 @@ set +e
 %install
 ./Build install destdir=%{buildroot} create_packlist=0
 
+find %{buildroot} -type f -name '*.pm' -exec chmod -x {} +
+if [ -d %{buildroot}%{_bindir} ]; then find %{buildroot}%{_bindir} -type f -exec chmod 755 {} +; fi
 %files
 %doc Changes
 %{_mandir}/man?/*
